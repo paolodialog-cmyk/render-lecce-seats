@@ -23,19 +23,20 @@
   .cols{display:flex;gap:8px;align-items:center;margin-bottom:6px}
   .cols span{flex:1;font-size:13px}
   input[type=color]{width:42px;height:28px;border:1px solid var(--line);border-radius:6px;padding:0;background:#fff}
+  .fab{position:fixed;left:14px;bottom:14px;z-index:5;box-shadow:0 4px 16px rgba(0,0,0,.15);background:rgba(251,250,248,.96)}
   .btns{display:flex;gap:6px}.btns>*{flex:1}
   input[type=file]{display:none}
   .spec{width:100%;border-collapse:collapse;font-size:12.5px}
   .spec td{padding:3px 0;border-bottom:1px solid #eeeae4}.spec td:last-child{text-align:right;font-variant-numeric:tabular-nums}
   .note{font-size:11.5px;color:var(--mut);margin-top:8px}
-  @media (max-width:760px){.panel{top:auto;bottom:0;right:0;left:0;width:auto;max-height:42%;border-radius:14px 14px 0 0}.title{display:none}}
+  @media (max-width:760px){.panel{top:auto;bottom:0;right:0;left:0;width:auto;max-height:42%;border-radius:14px 14px 0 0}.title{display:none}.fab{bottom:auto;top:10px;left:10px}}
 </style>
 </head>
 <body>
 <canvas id="c"></canvas>
 <div class="title"><h1>Copriseggiolino da stadio</h1><p>Simulazione 3D · seggiolino 430 × 350 mm · copri più stretto con lembo posteriore · imbottitura 8 mm · fasce con clip</p></div>
+<button id="hide-ui" class="fab">Nascondi pannello</button>
 <div class="panel">
-  <button id="hide-ui" style="width:100%;margin-bottom:10px">Nascondi pannello</button>
   <h2>Vista</h2>
   <div class="views">
     <button data-view="persp">3D</button><button data-view="front">Fronte</button><button data-view="side">Laterale</button>
